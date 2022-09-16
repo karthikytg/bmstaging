@@ -1,0 +1,529 @@
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:20%; padding: 2rem 3rem;">
+    <div class="admin-title">ADMIN PANEL</div>
+    <a routerLink="/dashboard" class="w3-bar-item w3-button">Dashboard</a>
+    <a routerLink="/product-list" class="w3-bar-item w3-button">Product</a>
+    <!-- <div class="w3-dropdown-hover">
+        <button class="w3-button">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+        </div>
+    </div> -->
+    <a routerLink="/passes-admin" class="w3-bar-item w3-button">Passes</a>
+    <a routerLink="/user-list" class="w3-bar-item w3-button" style="font-weight: bolder;">Users</a>
+    <a routerLink="/ref-ad-list" class="w3-bar-item w3-button">Referrals</a>
+    <a href="#" class="w3-bar-item w3-button">Reports</a>
+</div>
+
+<div style="margin-left:20%; height: 100vh;">
+    <div class="w3-container" style="display: flex;">
+        <div class="product-form">
+            <div class="page-title">
+                VIEWING USER DETAILS
+            </div>
+            <br>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <div class="inp-title flexEle">
+                            
+                            <span>PERSONAL INFORMATION</span>
+                            <span style="font-weight: bold;">EDIT</span>
+                        </div>
+                        <!-- <input type="text" class="inputs" formControlName="pname" value=""> -->
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 50%; vertical-align: baseline;">
+                        <div class="inp-title">
+                            <span>Name</span>
+                        </div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                    <td rowspan="2">
+                        <div class="inp-title">
+                            <span>Profile Pic</span>
+                        </div>
+                        <div class="c-card bg-brd">
+                            *
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; vertical-align: baseline;">
+                        <div class="inp-title">
+                            <span>Email Address</span>
+                        </div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                    
+                </tr>
+                <tr >
+                    <td>
+                        <div class="inp-title">Phone Number</div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                    <td>
+                        <div class="inp-title">Date Of Birth</div>
+                        <input type="date" class="inputs" value="">
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <div class="inp-title flexEle">
+                            
+                            <span>ADDRESS</span>
+                            <span style="font-weight: bold;">EDIT</span>
+                        </div>
+                        <!-- <input type="text" class="inputs" formControlName="pname" value=""> -->
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%;">
+                <tr >
+                    <td>
+                        <div class="inp-title">Address Line 1</div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                    <td>
+                        <div class="inp-title">Address Line 2(Optional)</div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <div class="inp-title">Pin Code</div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                    <td>
+                        <div class="inp-title">City</div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <div class="inp-title">State and Country</div>
+                        <input type="text" class="inputs" value="">
+                    </td>
+                    <td>
+                        <!-- <div class="inp-title">Address Line 2(Optional)</div>
+                        <input type="text" class="inputs" value=""> -->
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <div class="inp-title flexEle">
+                            
+                            <span>RESET PASSWORD</span>
+                            <!-- <span style="font-weight: bold;">EDIT</span> -->
+                        </div>
+                        <!-- <input type="text" class="inputs" formControlName="pname" value=""> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="inputs c-btn"  value="RESET PASSWORD FOR USER">
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table style="width: 40%;">
+                <tr>
+                    <td>
+                        <div class="inp-title flexEle">
+                            
+                            <span>PRIVACY OPTIONS</span>
+                            <span style="font-weight: bold;">EDIT</span>
+                        </div>
+                        <!-- <input type="text" class="inputs" formControlName="pname" value=""> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="inp-title">Standings and Winners List</div>
+                        <input type="text" class="inputs full-wid" value="">
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table style="width: 100%;">
+                <tr>
+                    <td colspan="2">
+                        <div class="inp-title flexEle">
+                            
+                            <span>BIDS WON</span>
+                            <!-- <span style="font-weight: bold;">EDIT</span> -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            Product 1
+                        </div>
+                        <div class="prod-card l1">
+                            <div class="pname">
+                                SAMSUNG GALAXY M51
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Date:</td>
+                                        <td>19th March 2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Segment:</td>
+                                        <td>Daily</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bid Price:</td>
+                                        <td>₹ 135.96</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status:</td>
+                                        <td style="font-weight: bold;">Bid Completed. Awaiting Purchase by User </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="remind">
+                                REMIND USER
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            Product 2
+                        </div>
+                        <div class="prod-card l1">
+                            <div class="pname">
+                                Sony MDX 100
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Date:</td>
+                                        <td>19th March 2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Segment:</td>
+                                        <td>Daily</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bid Price:</td>
+                                        <td>₹ 135.96</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Status:</td>
+                                        <td style="font-weight: bold;">Order Placed on 19th March 2021 at 12.10AM.</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="remind">
+                                UPDATE TRACKING INFO
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table border="0" style="width: 100%;">
+                <tr>
+                    <td colspan="2">
+                        <div class="inp-title flexEle">
+                            
+                            <span>BIDS PARTICIPATED</span>
+                            <span style="font-weight: bold;">VIEW ALL</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            Product 1
+                        </div>
+                        <div class="prod-card l3">
+                            <div class="pname">
+                                SAMSUNG GALAXY M51
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Date:</td>
+                                        <td>19th March 2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Segment:</td>
+                                        <td>Daily</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Winning Bid</td>
+                                        <td>₹ 135.96</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bid By User</td>
+                                        <td>₹ 135.96</td>
+                                    </tr>
+        
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            Product 2
+                        </div>
+                        <div class="prod-card l3">
+                            <div class="pname">
+                                Sony MDX 100
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Date:</td>
+                                        <td>19th March 2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Segment:</td>
+                                        <td>Daily</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Winning Bid</td>
+                                        <td>₹ 135.96</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bid By User</td>
+                                        <td>₹ 135.96</td>
+                                    </tr>
+        
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table border="0" style="width: 100%;">
+                <tr>
+                    <td colspan="2">
+                        <div class="inp-title flexEle">
+                            
+                            <span>ACTIVE PASSES</span>
+                            <!-- <span style="font-weight: bold;">VIEW ALL</span> -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            Pass 1
+                        </div>
+                        <div class="prod-card l1">
+                            <div class="pname">
+                                Launch Day Pass
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Purchase Date:	</td>
+                                        <td>19th March 2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amount Paid:</td>
+                                        <td>₹ 90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actual Price: </td>
+                                        <td>₹ 100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discount: </td>
+                                        <td>₹ 10 of 10%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discount type: </td>
+                                        <td>Referrals</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Referral Code Used: </td>
+                                        <td>35165165</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Referred by: </td>
+                                        <td>Arvind Joshi</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            Pass 2
+                        </div>
+                        <div class="prod-card l1">
+                            <div class="pname">
+                                Premium Weekend 1 Combo Pass
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Purchase Date:	</td>
+                                        <td>19th March 2021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amount Paid:</td>
+                                        <td>₹ 90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actual Price: </td>
+                                        <td>₹ 100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discount: </td>
+                                        <td>₹ 10 of 10%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discount type: </td>
+                                        <td>Referrals</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Referral Code Used: </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Referred by: </td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+            <br><br>
+            <table border="0" style="width: 100%;">
+                <tr>
+                    <td colspan="2">
+                        <div class="inp-title flexEle">
+                            
+                            <span>STORED PAYMENT OPTIONS</span>
+                            <!-- <span style="font-weight: bold;">VIEW ALL</span> -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            PAYMENT OPTION 1
+                        </div>
+                        <div class="prod-card l3">
+                            <div class="pname">
+                                Credit Card
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Card No:</td>
+                                        <td>4455 xxxx xxxx 8970</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Type:</td>
+                                        <td>VISA</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank: </td>
+                                        <td>HDFC Bank</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 50%;">
+                        <div class="inp-title">
+                            PAYMENT OPTION 2
+                        </div>
+                        <div class="prod-card l3">
+                            <div class="pname">
+                                UPI
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">UPI Id:	</td>
+                                        <td>xxxxxxxxx@okhdfc</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <table border="0" style="width: 100%;">
+                <tr>
+                    <td colspan="2">
+                        <div class="inp-title flexEle">
+                            
+                            <span>REFERRAL INFO</span>
+                            <!-- <span style="font-weight: bold;">VIEW ALL</span> -->
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <div class="prod-card l3">
+                            <div class="pname">
+                                REFERRALS
+                            </div>
+                            <div>
+                                <table border="0">
+                                    <tr>
+                                        <td style="width: 40%;">Amount Earned:	</td>
+                                        <td>₹ 500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Amount Paid Out:</td>
+                                        <td>₹ 500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Users Signed Up:  </td>
+                                        <td>25</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 50%;">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+        </div>
+        <div class="prod-info" style="margin: 6rem 1rem;">
+            <div class="inp-title" style="font-size: 20px; font-weight: bold;">USER ID</div>
+            <div style="font-size: 18px;">3458976534627899</div>
+            <div class="inp-title" style="font-size: 20px; font-weight: bold;">USER STATUS</div>
+            <div style="font-size: 18px;">ACTIVE ON PLATFORM</div>
+        </div>
+    </div>
+    
+    <br><br>
+</div>

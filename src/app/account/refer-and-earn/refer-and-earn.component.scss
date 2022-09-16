@@ -1,0 +1,213 @@
+.back {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    color: #19191F;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 29px;
+    cursor: pointer;
+}
+.pageTitle {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    color: #19191F;
+    font-family: "Cinzel Decorative";
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: 65px;
+}
+.referInfo {
+    margin-left: 4rem;
+    background-color: #DEE403 !important;
+    color: #000000;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 44px;
+    width: 45rem;
+}
+.refImg {
+    width: 75%;
+    height: 30rem;
+    margin: 3rem;
+}
+.referPrice {
+    width: 100%;
+    border-radius: 70px;
+    background-color: #DEE403;
+    margin: 3rem;
+    height: 30rem;
+    padding: 3rem;
+    .priceTxt {
+        color: #000000;
+        font-family: Lato;
+        font-size: 36px;
+        font-weight: 300;
+        letter-spacing: 0.38px;
+        line-height: 44px;
+    }
+    .tagline {
+        color: #000000;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.19px;
+        line-height: 22px;
+    }
+    .price {
+        color: #000000;
+        font-family: "Cinzel Decorative";
+        font-size: 144px;
+        letter-spacing: 1.5px;
+        line-height: 195px;
+        margin-top: 10rem;
+        span {
+            font-size: 65px;
+        }
+    }
+    .inviteMail {
+        display: flex;
+        justify-content: space-between;
+        color: #000000;
+        font-family: Lato;
+        font-size: 22px;
+        letter-spacing: 0.25px;
+        line-height: 29px;
+        margin-bottom: 1rem;
+        .left {
+            font-weight: 300;
+        }
+        .right {
+            font-weight: bold;
+        }
+    }
+    .inputfield {
+        padding: 1rem;   
+        span {
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .refercode {
+            width: 100%;
+            border-bottom: 2px solid #000;
+            input {
+                width: 100%;
+                height: 2rem;
+                background: transparent;
+                border: none;
+                color: #000;
+                font-size: 20px;
+                font-family: Lato;
+                font-weight: 300;
+            }
+            input:focus {
+                outline: none;
+            }
+            input::placeholder {
+                color: #000;
+                font-size: 20px;
+                font-family: Lato;
+                font-weight: 300;
+            }
+        }
+    }
+}
+.refInfo{
+    width: 100%;
+    border-radius: 70px;
+    background-color: #DEE403;
+    margin: 3rem -4rem;
+    height: 30rem;
+    padding: 3rem 5rem;
+    .sub {
+        color: #000000;
+        font-family: Lato;
+        font-size: 22px;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.19px;
+        line-height: 22px;
+    }
+    .message {
+        width: 700px;
+        color: #000000;
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 0.31px;
+        line-height: 29px;
+    }
+    .shareUs {
+        color: #000000;
+        font-family: Lato;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 1rem;
+        letter-spacing: 0.25px;
+        line-height: 29px;
+    }
+    .social-icons {
+        margin-top: 2rem;
+        display: flex;
+        img {
+            
+            margin-left: 2rem;
+            margin-right: 2rem;
+            width: 3rem;
+        }
+        .button {
+            background: transparent;
+            margin-left: 5rem;
+            padding: 1rem 3rem;
+            border: 2px solid #000000;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: Lato;
+            font-size: 18px;
+            letter-spacing: 0.56px;
+            line-height: 22px;
+        }
+    }
+   
+}
+
+.forHelp {
+    font-family: "Cinzel Decorative";
+    color: #FFFFFF;
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+    .title {
+        height: 25px;
+        width: 195px;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 25px;
+    }
+    .email {
+        height: 32px;
+        width: 470px;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: 32px;
+        margin-top: 1rem;
+        .link {
+            margin-top: 2rem;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            text-decoration: none
+        }
+    }
+    .social-icons {
+        img {
+            margin-top: 3rem;
+            margin-right: 5rem;
+            width: 4rem;
+        }
+    }
+}

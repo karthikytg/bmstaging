@@ -1,0 +1,418 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+    color: white;
+    height: 95vh;
+    .left {
+        flex: 1;    
+        border: 2px solid #E8EF01;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        
+        .circle {
+            width: 70%;
+            height: 80%;
+            border-radius: 50%;
+            background-color: #E8EF01;
+            margin-left: -15rem;
+            margin-top: 6rem;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 60%;
+                height: 55%;
+                margin: auto;
+            }
+        }
+        .circle2 {
+            width: 45%;
+            height: 47%;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            z-index: 2;
+            display: flex;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 5rem;
+            justify-content: center;
+            .text {
+                margin: auto;
+                color: #000000;
+                padding: 1rem 5rem;
+                font-family: Lato;
+                font-size: 20px;
+                font-weight: 300;
+                letter-spacing: 0;
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        border: 2px solid #E8EF01;
+        border-radius: 1rem;
+        .info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 3rem;
+            .pname {
+                text-align: center;
+                color: #FFFFFF;
+                font-family: Lato;
+                font-size: 48px;
+                font-weight: 300;
+                letter-spacing: 0;
+                flex: 1;
+            }
+            .desc {
+                flex: 1;
+                color: #FFFFFF;
+                font-family: Lato;
+                font-size: 16px;
+                font-weight: 300;
+                letter-spacing: 0;
+                flex: 1;
+                padding: 3rem 7rem;
+                .btime {
+                    font-family: Lato;
+                    margin-top: 1rem;
+                    font-size: 18px;
+                    font-weight: 300;
+                    letter-spacing: 0;
+                }
+            }
+            .bidprice {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin-top: 9rem;
+                .cbid {
+                    color: #FFFFFF;
+                    font-family: Lato;
+                    font-size: 24px;
+                    font-weight: 300;
+                    letter-spacing: 0;
+                    text-align: center;
+                }
+                .price {
+                    color: #FFFFFF;
+                    font-family: Lato;
+                    font-size: 40px;
+                    font-weight: 300;
+                    letter-spacing: 0;
+                    text-align: center;
+                }
+                .getin {
+                    flex: 1;
+                    width: 80%;
+                    font-family: Lato;
+                    background-color: #FF6400;
+                    color: white;
+                    padding: 1.2rem;
+                    border-radius: 50px;
+                    font-size: 1.6em;
+                    margin: auto;
+                    font-weight: 700;
+                }
+            }
+        }
+        
+        
+        
+    }
+}
+.standing {
+    margin: auto;
+    background-color: #000000;
+    max-width: 100%;
+    color: #FFFFFF;
+    margin-top: 5rem;
+    padding: 5rem 7rem;
+    border-radius: 15%;
+    .title {
+        font-family: Lato;
+        font-size: 32px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        .directions {
+            color: #FFFFFF;
+            font-family: "Lucida Grande";
+            font-size: 48px;
+            line-height: 56px;
+
+            cursor: pointer;
+            
+            .left {
+                width: 2rem;
+                
+            }
+            .inactive {
+                color: #FFFFFF;
+            }
+        }
+    }
+    .body {
+        margin-top: 4rem;
+        color: #FFFFFF !important;
+        font-family: Lato;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 0;
+        table {
+            color: #FFFFFF !important;
+        }
+        .pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 22px;
+            background-color: #FFFFFF;
+        }
+    }
+}
+.imgSlide {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    position: relative;
+    .left {
+        border: 2px solid #E8EF01;
+        border-left: none;
+        flex: 1;
+        overflow: visible;
+        .lImg {
+            position: absolute;
+            top: 9rem;
+            left: 0rem;
+            width: 45%;
+            height: 24rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .noms {
+            color: #FFFFFF;
+            font-family: Lato;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-left: 6rem;
+        }
+        .arrows {
+            position: absolute;
+            bottom: -1rem;
+            left: 10rem;
+            display: flex;
+            justify-content: center;
+            font-size: 7rem;
+            .active {
+                color: #FFFFFF;
+            }
+        }
+    }
+    .right {
+        border: 2px solid #E8EF01;
+        border-left: none;
+        flex: 2;
+        height: 100vh;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.specification-feature {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    font-size: 42px;
+    .left {
+        flex: 1;
+        border: 2px solid #E8EF01;
+        border-left: none;
+        border-top: none;
+        padding-top: 4rem;
+        padding-left: 15rem;
+    }
+    .right {
+        flex: 1;
+        border: 2px solid #E8EF01;
+        border-top: none;
+        border-left: none;
+        padding-top: 4rem;
+        padding-left: 2rem;
+    }
+}
+.specification-info {
+    display: flex;
+    flex-direction: row;
+    
+    font-family: Lato;
+    font-size: 24px;
+    .left {
+        flex: 1;
+        border: 2px solid #E8EF01;
+        border-left: none;
+        border-top: none;
+        padding-top: 4rem;
+        padding-left: 15rem;
+        table {
+            color: #FFFFFF;
+            tr {
+                td {
+                    padding-top: 2rem;
+                }
+            } 
+        }
+    }
+    .right {
+        flex: 1;
+        border: 2px solid #E8EF01;
+        border-top: none;
+        border-left: none;
+        padding-top: 4rem;
+        padding-left: 2rem;
+        color: #FFFFFF;
+        font-family: Lato;
+        font-size: 26px;
+        font-weight: 300;
+    }
+}
+.learn-more {
+    border-bottom: 2px solid #E8EF01;
+    text-align: center;
+    padding: 3rem 8rem;
+    input {
+        width: 100%;
+        background: transparent;
+        border-radius: 99px;
+        border: 2px solid #FFFFFF;
+        padding: 2rem;
+        color: #FFFFFF;
+        font-family: "Cinzel Decorative";
+        font-size: 42px;
+    }
+}
+.flex-support-contact {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    // font-size: 18px;
+
+    .support {
+        flex: 1;
+        padding: 10rem 5rem;
+        .text {
+            // padding: 5rem;
+        }
+        .social {
+            font-size: 1.5vw;
+            letter-spacing: 0;
+        }
+        .social-icons {
+            img {
+                margin-top: 1rem;
+                margin-right: 5rem;
+                width: 4rem;
+            }
+        }
+        .unit {
+            font-size: 2vw;
+        }
+    }
+    .contact {
+        flex: 1;
+        padding: 10rem 5rem;
+        span {
+            font-size: 22px;
+            border-bottom: 2px solid #FFFFFF;
+        }
+    
+    }
+}
+
+
+@media screen and (max-width: 1366px) {
+    
+}
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        height: 100vh;
+        .left {
+            margin-top: 13rem;
+        }
+        .right {
+            margin-top: 1rem;
+            .info {
+                .desc {
+                    padding: 2rem 1rem;
+                }
+            }
+        }
+    }
+    .flex-support-contact {
+        flex-direction: column;
+        .support {
+            padding: 10rem 2rem;
+        }
+        
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    
+   .flex-container {
+       flex-direction: column;
+       height: 100vh;
+       .left {
+            flex: 2;
+            border-left: none;
+            border-right: none;
+            margin-top: 13rem;
+        }
+        .right {
+            flex: 1;
+            margin-top: 1rem;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            .info {
+                .pname {
+                    font-size: 35px;
+                }
+                .desc {
+                    padding: 2rem 1rem;
+                }
+                .bidprice {
+                    .cbid {
+                        padding-left: 2rem;
+                    }
+                    .price {
+                        font-size: 46px;
+                        padding-left: 2rem;
+                    }
+                }
+            }
+        
+        }
+   }
+   .flex-support-contact {
+       flex-direction: column;
+       margin-top: 7rem;
+       .support {
+            padding: 10rem 2rem;
+        }
+   }
+   
+}

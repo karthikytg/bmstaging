@@ -1,0 +1,78 @@
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:20%; padding: 2rem 3rem;">
+    <div class="admin-title">ADMIN PANEL</div>
+    <a routerLink="/dashboard" class="w3-bar-item w3-button">Dashboard</a>
+    <a routerLink="/product-list" class="w3-bar-item w3-button">Product</a>
+    <!-- <div class="w3-dropdown-hover">
+        <button class="w3-button">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+        </div>
+    </div> -->
+    <a routerLink="/passes-admin" class="w3-bar-item w3-button">Passes</a>
+    <a routerLink="/user-list" class="w3-bar-item w3-button">Users</a>
+    <a routerLink="/ref-ad-list" class="w3-bar-item w3-button" style="font-weight: bolder;">Referrals</a>
+    <a href="#" class="w3-bar-item w3-button">Reports</a>
+</div>
+
+<div style="margin-left:20%; height: 100vh;">
+    <div class="w3-container" style="display: flex;">
+        <div class="product-form" >
+            <div class="page-title" *ngIf="title === 'add'">
+                ADDING NEW REFERRAL CAMPAIGN
+            </div>
+            <div class="page-title" *ngIf="title === 'view'">
+                VIEWING PRODUCT IN DAILY SEGMENT
+            </div>
+            <form [formGroup]="prodForm">
+                <br><br>
+                <table style="width: 100%;">
+                    <tr *ngIf="title === 'view'">
+                        <td colspan="2" align="right">
+                            <span style="font-weight: bold; margin-right: 2rem;">EDIT</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inp-title">Campaign Name</div>
+                            <input type="text" class="inputs" formControlName="campaignName">
+                        </td>
+                        <td>
+                            <div class="inp-title">Discount Percentage</div>
+                            <input type="number" class="inputs" formControlName="discPer">
+                        </td>
+                    </tr>
+                </table>
+                
+                
+                <br><br>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 30%;">
+                            <input type="button" class="form-btns b1" value="CANCEL">
+                        </td>
+                        <td style="width: 30%;">
+                            <input *ngIf="title === 'add'" type="button" (click)="saveReferral()"  class="form-btns b2" value="ACTIVATE">
+                            <input *ngIf="title !== 'add'" type="button" (click)="upReferral()"  class="form-btns b2" value="ACTIVATE">
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div *ngIf="title === 'view'" class="prod-info">
+            <div style="font-size: 14px; font-weight: bold;">REFERRAL CAMPAIGN ID</div>
+            <div style="font-size: 18px;">{{ cId }}</div>
+            <div style="font-size: 14px; font-weight: bold;">CAMPAIGN STATUS</div>
+            <div style="font-size: 18px;">{{ sts | uppercase }}</div>
+            <div style="font-size: 14px; font-weight: bold;">CREATED ON</div>
+            <div style="font-size: 18px;">{{ dt | date: "dd MMMM yyyy"}}</div>
+        </div>
+    </div>
+    
+    <br><br>
+</div>

@@ -1,0 +1,131 @@
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card"
+    style="width:20%; padding: 2rem 3rem;">
+    <div class="admin-title">ADMIN PANEL</div>
+    <a routerLink="/dashboard"
+        class="w3-bar-item w3-button">Dashboard</a>
+    <a routerLink="/product-list"
+        class="w3-bar-item w3-button"
+        style="font-weight: bolder;">Product</a>
+    <!-- <div class="w3-dropdown-hover">
+        <button class="w3-button">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+        </div>
+    </div> -->
+    <a routerLink="/passes-admin"
+        class="w3-bar-item w3-button">Passes</a>
+    <a routerLink="/user-list"
+        class="w3-bar-item w3-button">Users</a>
+    <a routerLink="/ref-ad-list"
+        class="w3-bar-item w3-button">Referrals</a>
+    <a href="#"
+        class="w3-bar-item w3-button">Reports</a>
+</div>
+
+<div style="margin-left:20%; height: 100vh;">
+    <div class="w3-container">
+        <div class="add-search">
+            <div style="display: flex;">
+                <img src="assets/icons/search_icon_152764.png"
+                    (click)="toggleSearchShow()"
+                    class="search-icon"
+                    alt="">
+                &nbsp;&nbsp;&nbsp;
+                <input *ngIf="showSearch"
+                    type="text"
+                    class="inputs search"
+                    [(ngModel)]="search"
+                    (input)="searchProducts()"
+                    placeholder="Search ....">
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">ADD PRODUCT &nbsp;&nbsp;&nbsp;<img src="assets/icons/plus.png"
+                        style="width: 35px; height: 30px;"
+                        alt=""></button>
+                <div class="dropdown-content">
+                    <a routerLink="/add-product/daily/+">
+                        <div class="addin">Add In</div>
+                        <div class="cat">DAILY</div>
+                    </a>
+                    <a routerLink="/add-product/pre/+">
+                        <div class="addin">Add In</div>
+                        <div class="cat">PREMIUM</div>
+                    </a>
+                    <a routerLink="/add-product/spec/+">
+                        <div class="addin">Add In</div>
+                        <div class="cat">SPECIAL SLOT</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <table style="width: 100%;"
+            border="0">
+            <tr class="table-heading">
+                <td>RELEASE DATE</td>
+                <td>SEGMENT</td>
+                <td>PRODUCT NAME</td>
+                <td>STATUS</td>
+            </tr>
+            <ng-container *ngFor="let p of products">
+                <tr class="table-row"
+                    (click)="p.acc = !p.acc">
+                    <td>{{ p.releaseDate | date: 'dd/MM/yyyy'}}</td>
+                    <td *ngIf="p.pType === 'pre'">PREMIUM</td>
+                    <td *ngIf="p.pType === 'daily'">DAILY</td>
+                    <td *ngIf="p.pType === 'spec'">SPECIAL</td>
+                    <td>
+                        <span class="rect"
+                            style="background: url('http://localhost:3001/{{ p.pImage }}'); background-size: 32px 30px; object-fit: cover;">
+                        </span>{{p.pname }}
+                    </td>
+                    <td style="display: flex; justify-content: space-between;"><span>{{ p.status }}</span> <img
+                            src="/assets/icons/down-arrow-5.png"
+                            style="width: 30px; height: 30px;"
+                            alt=""></td>
+                </tr>
+                <tr class="table-heading"
+                    *ngIf="p.acc">
+                    <td><img src="assets/icons/delete.jpg"
+                            (click)="deleteProd(p.id)"
+                            style="width: 30px; height: 30px;"
+                            alt=""></td>
+                    <td colspan="3"
+                        align="right">
+                        <div style="display: flex;  width: fit-content;">
+                            <button class="dropbtn fix-w-dis"
+                                (click)="navTo('uti', p.id)">UPDATE TRACKING INFO</button>
+                            &nbsp;&nbsp;
+                            <button class="dropbtn fix-w-dis"
+                                (click)="navTo('vbri', p.id)">VIEW BIDDING RELATED INFO</button>
+                            &nbsp;&nbsp;
+                            <button class="dropbtn fix-w-dis"
+                                (click)="navTo('vpd', p.id)">VIEW PRODUCT DETAILS</button>
+                            &nbsp;&nbsp;
+                            <button class="dropbtn fix-w-dis"
+                                (click)="navTo('pds', p.id)">PUBLISH PRODUCT TO SITE</button>
+                            &nbsp;&nbsp;&nbsp;
+                        </div>
+                    </td>
+                </tr>
+            </ng-container>
+        </table>
+        <!-- <button class="accordion">Section 1</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div> -->
+
+    </div>
+</div>

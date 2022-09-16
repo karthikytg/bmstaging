@@ -1,0 +1,140 @@
+<div class="pass-row">
+    <div class="left">
+        <div class="img-div">
+            <img src="assets/images/passes3.png"
+                alt="">
+        </div>
+    </div>
+    <div class="right">
+        <div class="day">
+            LAUNCH DAY PASS
+        </div>
+        <div class="price">
+            ₹ 100
+        </div>
+        <input type="button"
+            value="VIEW DETAILS">
+    </div>
+</div>
+<div class="day-pass">
+    DAILY PASSES
+</div>
+<div class="daily-passes-container">
+    <ng-container *ngIf="dailyPasses!=undefined&&dailyPasses.length>0; else noDailyPasses">
+        <div class="pass-list color1">
+            <ng-container *ngFor="let pass of dailyPasses">
+                <ng-container *ngTemplateOutlet="genericPass; context: {$implicit: pass}"></ng-container>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>
+<div class="day-pass">
+    PREMIUM PASSES
+</div>
+<ng-container *ngIf="premiumPasses!=undefined&&premiumPasses.length>0; else noDailyPasses">
+    <div class="pass-list color2">
+        <ng-container *ngFor="let pass of premiumPasses">
+            <ng-container *ngTemplateOutlet="genericPass; context: {$implicit: pass}"></ng-container>
+        </ng-container>
+    </div>
+</ng-container>
+<div class="day-pass">
+    ALL ACCESS PASSES
+</div>
+<ng-container *ngIf="allAccessPasses!=undefined&&allAccessPasses.length>0; else noDailyPasses">
+    <div class="pass-list">
+        <ng-container *ngFor="let pass of allAccessPasses">
+            <ng-container *ngTemplateOutlet="genericPass; context: {$implicit: pass}"></ng-container>
+        </ng-container>
+    </div>
+</ng-container>
+
+<ng-template #noDailyPasses>
+    <div class="no-pass">Daily Passes Not Available.</div>
+</ng-template>
+
+<ng-template #genericPass
+    let-pass>
+    <div class="pass bg1">
+        <div class="title">
+            {{pass.pname}}
+        </div>
+        <div class="price">
+            ₹ {{pass.amount}}
+        </div>
+        <img src="{{imageBaseUrl}}{{pass.pImage}}"
+            alt="">
+    </div>
+</ng-template>
+
+<div class="flex-support-contact">
+    <div class="support">
+        <div class="text">
+            <div style="font-size: 1.5vw;">FOR HELP & SUPPORT</div>
+            <div style="font-size: 2vw;">HELLO@BIDMOUSE.CO</div>
+            <br><br><br><br>
+            <div class="social">
+                VISIT OUR SOCIAL PAGES
+            </div>
+            <div class="social-icons">
+                <img src="assets/icons/facebook-singupsignin.svg"
+                    alt="">
+                <img src="assets/icons/twitter_referral.svg"
+                    alt="">
+                <img src="assets/icons/google-signupsignin.svg"
+                    alt="">
+            </div>
+            <br><br><br><br>
+            <div class="unit">
+                BidMouse is a Unit of <br>
+                AMGB Treeline Private Limited
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div style="font-size: 1.5vw;">Site Links</div>
+        <br><br><br><br>
+        <table border="0"
+            style="width: 110%;">
+            <tr>
+                <td><span>Sign Up →</span></td>
+                <td><span>Standard →</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span>Refer and Earn →</span></td>
+                <td><span><span>Premium →</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span><span>FAQ’s →</span></span></td>
+                <td><span><span>Winners →</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span>Help Centre→</span></td>
+                <td><span>About BidMouse →</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span>Privacy Policy →</span></td>
+                <td><span>Partner with BidMouse →</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2"><span>Terms of Service →</span></td>
+            </tr>
+        </table>
+
+    </div>
+</div>

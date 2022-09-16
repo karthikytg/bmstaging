@@ -1,0 +1,303 @@
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:20%; padding: 2rem 3rem;">
+    <div class="admin-title">ADMIN PANEL</div>
+    <a routerLink="/dashboard" class="w3-bar-item w3-button">Dashboard</a>
+    <a routerLink="/product-list" class="w3-bar-item w3-button" style="font-weight: bolder;">Product</a>
+    <!-- <div class="w3-dropdown-hover">
+        <button class="w3-button">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+        </div>
+    </div> -->
+    <a routerLink="/passes-admin" class="w3-bar-item w3-button">Passes</a>
+    <a routerLink="/user-list" class="w3-bar-item w3-button">Users</a>
+    <a  routerLink="/ref-ad-list" class="w3-bar-item w3-button">Referrals</a>
+    <a href="#" class="w3-bar-item w3-button">Reports</a>
+</div>
+
+<div style="margin-left:20%; height: 100vh;">
+    <div class="w3-container" style="display: flex;">
+        <div class="product-form" *ngIf="title !== 'bidInfo'">
+            <form [formGroup]="prodForm" id="data" method="post" enctype="multipart/form-data">
+            <div class="page-title" *ngIf="title === 'daily'">
+                ADDING PRODUCT IN DAILY SEGMENT
+            </div>
+            <div class="page-title" *ngIf="title === 'pre'">
+                ADDING PRODUCT IN PREMIUM SEGMENT
+            </div>
+            <div class="page-title" *ngIf="title === 'spec'">
+                ADDING PRODUCT IN SPECIAL SLOT
+            </div>
+            <div class="page-title" *ngIf="title === 'view'">
+                <span *ngIf="this.viewInfo.pType === 'pre'">VIEWING PRODUCT IN PREMIUM SEGMENT</span>
+                <span *ngIf="this.viewInfo.pType === 'daily'">VIEWING PRODUCT IN DAILY SEGMENT</span>
+                <span *ngIf="this.viewInfo.pType === 'spec'">VIEWING PRODUCT IN SPECIAL SEGMENT</span>
+            </div>
+            <table  *ngIf="title === 'spec' || this.viewInfo.pType === 'spec'" style="width: 50%;">
+                <tr>
+                    <td>
+                        <div class="inp-title">
+                            TITLE FOR THE HERO SECTION
+                        </div>
+                        <input type="text" class="inputs" formControlName="heroTitle">
+                    </td>
+                </tr>
+            </table>
+            <div class="info-level">
+                <span>LEVEL 1 INFORMATION</span>
+                <span *ngIf="title === 'view'" style="margin-right: 3rem;">EDIT</span>
+            </div>
+            <!-- <form [formGroup]="prodForm"> -->
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <div class="inp-title">
+                                Product Name
+                            </div>
+                            <input type="text" class="inputs" formControlName="pname">
+                        </td>
+                        <td rowspan="2" style="vertical-align: baseline;">
+                            <div class="inp-title">
+                                Brief Description
+                            </div>
+                            <textarea formControlName="description" class="textArea"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inp-title">Upload Product Main Image</div>
+                            <input type="file" name="image" #file  type='file' (change)="prodImageFile($event)" multiple="false" style="display: none;">
+                            <input type="button" class="dropbtn" value="UPLOAD IMAGE" (click)="file.click()"><br>
+                            <a *ngIf="title === 'view'" href="http://localhost:3001/{{this.pImage}}" target="_blank">PREVIEW ADJUST</a>
+                            <span style="width: 150%;">{{ file1 }}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inp-title">Release Date</div>
+                            <input type="date" class="inputs" formControlName="releaseDate" (change)="setDates()">
+                        </td>
+                        <td>
+                            <div class="inp-title">Bid Start price</div>
+                            <input type="text" class="inputs" formControlName="bidPrice">
+                        </td>
+                    </tr>
+                </table>
+                <div class="info-level">
+                    LEVEL 2 INFORMATION
+                </div>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <div class="inp-title">Bid Increment</div>
+                            <input type="text" class="inputs small" formControlName="bidInc">
+                            <!-- <span class="static-text">CHANGE</span> -->
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="width: 50%;">
+                            <div class="inp-title">Bid Start Date</div>
+                            <input type="date" class="inputs" formControlName="bidStartDate">
+                            <!-- <span class="static-text">CHANGE</span> -->
+                        </td>
+                        <td style="width: 50%;">
+                            <div class="inp-title">Bid Start Time</div>
+                            <input type="time" class="inputs" formControlName="bidStartTime">
+                            <!-- <span class="static-text">CHANGE</span> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inp-title">Bid End Date</div>
+                            <input type="date" class="inputs" formControlName="bidEndDate">
+                            <!-- <span class="static-text">CHANGE</span> -->
+                        </td>
+                        <td>
+                            <div class="inp-title">Bid End Time</div>
+                            <input type="time" class="inputs" formControlName="bidEndTime">
+                            <!-- <span class="static-text">CHANGE</span> -->
+                        </td>
+                    </tr>
+                </table>
+                <div class="info-level">
+                    LEVEL 3 INFORMATION
+                </div>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%;">
+                            <div class="inp-title">Product Feature</div>
+                            <textarea name="" id="" formControlName="prodFeature"  class="textArea exp"></textarea>
+                        </td>
+                        <td>
+                            <div class="inp-title">Product Specification</div>
+                            <textarea name="" id="" formControlName="prodSpec"  class="textArea exp"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="inp-title">Upload supporting Images</div>
+                            <input type="file" name="image" #file2  type='file' (change)="supportFiles($event)" multiple="false" style="display: none;">
+                            <input type="button" class="dropbtn" value="UPLOAD IMAGES" (click)="file2.click()"><br>
+                            <a *ngIf="title === 'view'" href="http://localhost:3001/{{viewInfo.suppImage}}" target="_blank">PREVIEW ADJUST</a>
+                            <!-- <span>{{ file2 }}</span> -->
+                        </td>
+                        <td>
+                            <div class="inp-title">Upload Supporting Video (Optional)</div>
+                            <input type="file" name="image" #file3  (change)="supportVid($event)" type='file' multiple="false" style="display: none;">
+                            <input type="button" class="dropbtn" value="UPLOAD VIDEOS" (click)="file3.click()"><br>
+                            <a *ngIf="title === 'view'" href="http://localhost:3001/{{viewInfo.suppVid}}" target="_blank">PREVIEW ADJUST</a>
+                            <!-- <span >{{ file3 }}</span> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="inp-title">Link for Learn More (Optional)</div>
+                            <input type="text" class="inputs" formControlName="learnLink" id="">
+                        </td>
+                    </tr>
+                </table>
+                <br><br>
+                <table *ngIf="title !== 'view'" style="width: 100%;">
+                    <tr>
+                        <td>
+                            <input type="button" class="form-btns b1" value="CANCEL ADDING PRODUCT">
+                        </td>
+                        <td>
+                            <input type="submit" (click)="submitForm('1')"  class="form-btns b2" value="PUBLISH PRODUCT TO SITE">
+                        </td>
+                        <td>
+                            <input type="button" (click)="submitForm('2')"  class="form-btns b2" value="SAVE AS DRAFT">
+                        </td>
+                    </tr>
+                </table>
+                <table *ngIf="title === 'view'" style="width: 100%;">
+                    <tr>
+                        <td>
+                            <input type="button" class="form-btns b1" value="CANCEL UPDATE PRODUCT">
+                        </td>
+                        <td>
+                            <input type="submit" (click)="updateForm()"  class="form-btns b2" value="UPDATE PRODUCT">
+                        </td>
+                        <!-- <td>
+                            <input type="button" (click)="submitForm('2')"  class="form-btns b2" value="SAVE AS DRAFT">
+                        </td> -->
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div *ngIf="title === 'view'" class="prod-info">
+            <div style="font-size: 14px; font-weight: bold;">PRODUCT ID</div>
+            <div style="font-size: 18px;">{{ viewInfo.pid }}</div>
+            <div style="font-size: 14px; font-weight: bold;">PRODUCT STATUS</div>
+            <div style="font-size: 18px;">{{ viewInfo.sts }}</div>
+        </div>
+        <!-- <div *ngIf="title === 'bidInfo'" class="prod-info">
+            <div style="font-size: 14px; font-weight: bold;">PRODUCT ID</div>
+            <div style="font-size: 18px;">3458976534627899</div>
+            <div style="font-size: 14px; font-weight: bold;">PRODUCT STATUS</div>
+            <div style="font-size: 18px;">LIVE ON SITE</div>
+        </div> -->
+        <div  class="product-form" *ngIf="title === 'bidInfo'">
+            <div class="page-title">
+                VIEWING PRODUCT BIDDING RELATED INFO
+            </div>
+            <br><br>
+            <div style="font-size: 14px; font-weight: bold;">PRODUCT ID</div>
+            <br>
+            <div style="font-size: 18px;">{{ viewInfo.pid }}</div>
+            <br><br>
+            <table style="width: 50%;">
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">PRODUCT NAME</td>
+                    <td>{{ viewInfo.pname }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">BIDDING STATUS</td>
+                    <td *ngIf="viewInfo.sts === 'SITE'">Bidding In Progress</td>
+                    <td *ngIf="viewInfo.sts !== 'SITE'">{{ viewInfo.sts }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">BID START PRICE</td>
+                    <td>₹ {{ viewInfo.bidPrice }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">CURRENT BID PRICE</td>
+                    <td>₹ {{ viewInfo.cBidPrice }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">HIGHEST BID PRICE</td>
+                    <td>{{ viewInfo.hbp }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">ACTIVE PARTICIPANTS</td>
+                    <td>{{ viewInfo.ap }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">HIGHEST BIDDER</td>
+                    <td>{{ viewInfo.hb }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">BID INCREMENT</td>
+                    <td>{{ viewInfo.bidInc }} Paisa</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">BID START DATE</td>
+                    <td>{{ viewInfo.bidStartDate | date: "dd MMMM yyyy" }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">BID START TIME</td>
+                    <td>{{ viewInfo.bidStartTime }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">BID END DATE</td>
+                    <td>{{ viewInfo.bidEndDate | date: "dd MMMM yyyy" }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 18px; font-weight: bold;">BID END TIME</td>
+                    <td>{{ viewInfo.bidEndTime }}</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <br><br>
+</div>

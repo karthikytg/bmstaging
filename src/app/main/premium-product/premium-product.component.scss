@@ -1,0 +1,366 @@
+.prod-inf {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    .p1 {
+        border: 1px solid #4A4A4A;
+        flex: 1;
+        .brand {
+            border-bottom: 1px solid #4A4A4A;
+            padding: 2rem 5rem;
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        .origin {
+            padding: 2rem 5rem;
+            font-family: Lato;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .o2 {
+            color: #FF6400;
+            text-align: center;
+            font-family: "Cinzel Decorative";
+            font-size: 64px;
+        }
+    }
+    .p2 {
+        border: 1px solid #4A4A4A;
+        flex: 1;
+    }
+    .p3 {
+        border: 1px solid #4A4A4A;
+        flex: 1;
+    }
+}
+.three-circle {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    .c1 {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        .circle {
+            width: 100%;
+            height: 65vh;
+            border-radius: 50%;
+            background-color: #E8EF01;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 30%;
+                height: 55%;
+                margin: auto;
+            }
+            span {
+                color: #000000;
+                font-family: "Cinzel Decorative";
+                font-size: 48px;
+                margin: auto;
+                text-align: center;
+            }
+        }
+    }
+    .c2 {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        .circle {
+            width: 100%;
+            height: 65vh;
+            border-radius: 50%;
+            background-color: #FF6400;
+            z-index: 1;
+            padding: 12rem 0rem;
+            img {
+                width: 30%;
+                height: 55%;
+                margin: auto;
+            }
+            .price {
+                color: #FFFFFF;
+                font-family: Cinzel;
+                font-size: 48px;
+                margin: auto;
+                text-align: center;
+            }
+            .place {
+                color: #FFFFFF;
+                font-family: Cinzel;
+                font-size: 40px;
+                margin: auto;
+                text-align: center;
+            }
+        }
+    }
+    .c3 {
+        flex: 1;
+    }
+}
+.standing {
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    font-size: 10rem;
+    padding: 1rem 5rem;
+}
+.profile-img {
+    width: 45%;
+    margin: auto;
+    margin-top: 30%;
+    
+    img {
+        width: 100%;
+        height: 15rem;
+        border-radius: 25%;
+        object-fit: cover;
+    }
+    .name {
+        font-family: Cinzel;
+        font-size: 48px;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+.std-table {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 300;
+    .left {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-left: none;
+        
+    }
+    .right {
+        flex: 2;
+        // border: 1px solid #4A4A4A;
+        table {
+            width: 100%;
+            td {
+                border: 1px solid #4A4A4A;
+                padding: 1rem 0rem;
+                width: 50%;
+                span {
+                    margin-left: 5rem;
+                    padding-right: 5rem;
+                }
+            }
+            
+        }
+    }
+}
+.blank {
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    .d1 {
+        flex: 1;
+        border: 1px solid;
+    }
+    .d2 {
+        flex: 1;
+        border: 1px solid;
+    }
+    .d3 {
+        flex: 1;
+        border: 1px solid;
+        .arrows {
+            margin-left: 5rem;
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 1rem;
+            .inactive {
+                color: #2F2F2F;
+            }
+        }
+    }
+}
+.product {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    font-size: 5rem;
+}
+.dot-labels {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 5rem;
+    background-color: #000000;
+}
+.imgSlid {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    .left {
+        flex: 2;
+        border: 1px solid #4A4A4A;
+        border-left: none;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        img {
+            width: 95%;
+            height: 90vh;
+        }
+    }
+    .right {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-left: none;
+        border-right: none;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        font-family: Lato;
+        position: relative;
+        .photos {
+            margin-left: 5rem;
+            
+            font-size: 21px;
+            font-weight: bold;
+        }
+        .noms {
+            margin-left: 5rem;
+            font-size: 5rem;
+            font-weight: bold;
+            span {
+                font-size: 2rem;
+            }
+        }
+        .arrows {
+            position: absolute;
+            bottom: 0rem;
+            left: 5rem;
+            font-size: 10rem;
+            font-weight: bold;
+            letter-spacing: 1rem;
+            .inactive {
+                color: #2F2F2F;
+            }
+        }
+    }
+}
+.specification-feature {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    font-size: 42px;
+    .left {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-left: none;
+        border-top: none;
+        padding-top: 4rem;
+        padding-right: 4.2rem;
+        .spec {
+            margin-left: 10rem;
+        }
+    }
+    .right {
+        flex: 1;
+        border: 2px solid #4A4A4A;
+        border-top: none;
+        border-left: none;
+        padding-top: 4rem;
+        padding-left: 2rem;
+    }
+}
+.specification-info {
+    display: flex;
+    flex-direction: row;
+    
+    font-family: Lato;
+    font-size: 24px;
+    .left {
+        flex: 1;
+        border: 2px solid #4A4A4A;
+        border-top: none;
+        border-left: none;
+        padding-top: 4rem;
+        padding-right: 4rem;
+        table {
+            margin-left: 10rem;
+            color: #FFFFFF;
+            tr {
+                td {
+                    padding-top: 2rem;
+                }
+            } 
+        }
+    }
+    .right {
+        flex: 1;
+        border: 2px solid #4A4A4A;
+        border-top: none;
+        border-left: none;
+        padding-top: 4rem;
+        padding-left: 2rem;
+        color: #FFFFFF;
+        font-family: Lato;
+        font-size: 30px;
+        font-weight: 300;
+        .fea {
+            width: 85%;
+        }
+    }
+}
+.learn-more {
+    border-bottom: 2px solid #4A4A4A;
+    text-align: center;
+    padding: 3rem 8rem;
+    input {
+        background: transparent;
+        border-radius: 99px;
+        border: 2px solid #FFFFFF;
+        padding: 2rem;
+        color: #FFFFFF;
+        font-family: "Cinzel Decorative";
+        font-size: 2rem;
+    }
+}
+.flex-support-contact {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    // font-size: 18px;
+
+    .support {
+        flex: 1;
+        padding: 10rem 5rem;
+        .text {
+            // padding: 5rem;
+        }
+        .social {
+            font-size: 1.5vw;
+            letter-spacing: 0;
+        }
+        .social-icons {
+            img {
+                margin-top: 1rem;
+                margin-right: 5rem;
+                width: 4rem;
+            }
+        }
+        .unit {
+            font-size: 2vw;
+        }
+    }
+    .contact {
+        flex: 1;
+        padding: 10rem 5rem;
+        span {
+            font-size: 24px;
+            border-bottom: 2px solid #FFFFFF;
+        }
+    
+    }
+}

@@ -1,0 +1,103 @@
+.back {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    color: #19191F;
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 29px;
+    cursor: pointer;
+}
+.pageTitle {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    color: #19191F;
+    font-family: "Cinzel Decorative";
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: 65px;
+}
+.leftPasses {
+    padding: 10rem 2rem;
+    img {
+        width: 100%;
+    }
+}
+.passDetails {
+    color: #fff;
+    padding: 5rem;
+    .title {
+        color: #FFFFFF;
+        font-family: "Cinzel Decorative";
+        font-size: 48px;
+        letter-spacing: 0.5px;
+        line-height: 65px;
+        margin-bottom: 5rem;
+    }
+    .start {
+        color: #FFFFFF;
+        font-family: Lato;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 0.19px;
+        line-height: 22px;
+        .values {
+            font-weight: 300;
+        }
+    }
+    .ldTxt {
+        width: 25rem;
+        color: #FFFFFF;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.19px;
+        line-height: 22px;
+        margin-top: 2rem;
+    }
+    .passPrice {
+        margin-top: 6rem;
+        color: #FFFFFF;
+        font-family: Lato;
+        font-size: 72px;
+        font-weight: 300;
+        letter-spacing: 0.75px;
+        line-height: 86px;
+    }
+}
+.forHelp {
+    font-family: "Cinzel Decorative";
+    color: #FFFFFF;
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+    .title {
+        height: 25px;
+        width: 195px;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 25px;
+    }
+    .email {
+        height: 32px;
+        width: 470px;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: 32px;
+        margin-top: 1rem;
+        .link {
+            margin-top: 2rem;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            text-decoration: none
+        }
+    }
+    .social-icons {
+        img {
+            margin-top: 3rem;
+            margin-right: 5rem;
+            width: 4rem;
+        }
+    }
+}

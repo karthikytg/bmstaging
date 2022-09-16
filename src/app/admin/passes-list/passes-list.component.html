@@ -1,0 +1,145 @@
+<div class="w3-sidebar w3-bar-block w3-light-grey w3-card"
+    style="width:20%; padding: 2rem 3rem;">
+    <div class="admin-title">ADMIN PANEL</div>
+    <a routerLink="/dashboard"
+        class="w3-bar-item w3-button">Dashboard</a>
+    <a routerLink="/product-list"
+        class="w3-bar-item w3-button">Product</a>
+    <!-- <div class="w3-dropdown-hover">
+        <button class="w3-button">Dropdown
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="w3-dropdown-content w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+            <a href="#" class="w3-bar-item w3-button">Link</a>
+        </div>
+    </div> -->
+    <a routerLink="/passes-admin"
+        class="w3-bar-item w3-button"
+        style="font-weight: bolder;">Passes</a>
+    <a routerLink="/user-list"
+        class="w3-bar-item w3-button">Users</a>
+    <a routerLink="/ref-ad-list"
+        class="w3-bar-item w3-button">Referrals</a>
+    <a href="#"
+        class="w3-bar-item w3-button">Reports</a>
+</div>
+
+<div style="margin-left:20%; height: 100vh;">
+    <div class="w3-container">
+        <div class="add-search">
+            <div style="display: flex;">
+                <img src="assets/icons/search_icon_152764.png"
+                    (click)="toggleSearchShow()"
+                    class="search-icon"
+                    alt="">
+                &nbsp;&nbsp;&nbsp;
+                <input *ngIf="showSearch"
+                    type="text"
+                    class="inputs search"
+                    [(ngModel)]="search"
+                    (input)="searchProducts()"
+                    placeholder="Search ....">
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">ADD PASS &nbsp;&nbsp;&nbsp;<img src="assets/icons/plus.png"
+                        style="width: 35px; height: 30px;"
+                        alt=""></button>
+                <div class="dropdown-content">
+                    <a routerLink="/passes-manage/daily/+">
+                        <div class="addin">Add </div>
+                        <div class="cat">DAILY PASS</div>
+                    </a>
+                    <a routerLink="/passes-manage/pre/+">
+                        <div class="addin">Add </div>
+                        <div class="cat">PREMIUM PASS</div>
+                    </a>
+                    <a routerLink="/passes-manage/spec/+">
+                        <div class="addin">Add </div>
+                        <div class="cat">SPECIAL SLOT PASS</div>
+                    </a>
+                    <a routerLink="/passes-manage/combo/+">
+                        <div class="addin">Add </div>
+                        <div class="cat">COMBO PASS</div>
+                    </a>
+                    <a routerLink="/passes-manage/all/+">
+                        <div class="addin">Add </div>
+                        <div class="cat">ALL ACCESS PASS</div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <table style="width: 100%;"
+            border="0">
+            <tr class="table-heading">
+                <td>SL NO</td>
+                <td>SEGMENT</td>
+                <td>PASS NAME</td>
+                <td>STATUS</td>
+            </tr>
+            <ng-container *ngFor="let p of passes; index as i">
+                <tr class="table-row"
+                    (click)="expandedOptionsIndex = expandedOptionsIndex == i ? -1 : i">
+                    <td>{{ i+1 }}</td>
+                    <td *ngIf="p.pType == PassType.ALLACCESS">ALL ACCESS</td>
+                    <td *ngIf="p.pType == PassType.PREMIUM">PREMIUM</td>
+                    <td *ngIf="p.pType == PassType.DAILY">DAILY</td>
+                    <td *ngIf="p.pType == PassType.SPECIAL">SPECIAL</td>
+                    <td *ngIf="p.pType == PassType.COMBO">COMBO</td>
+                    <td style="vertical-align: baseline;">
+                        <span class="rect"
+                            style="background: url('http://localhost:3001/{{ p.pImage }}'); background-size: 32px 30px; object-fit: cover;">
+                        </span>
+                        {{p.pname | uppercase }}
+                    </td>
+                    <td style="display: flex; justify-content: space-between;"><span>{{ p.status }}</span> <img
+                            src="/assets/icons/down-arrow-5.png"
+                            style="width: 30px; height: 30px;"
+                            alt=""></td>
+                </tr>
+                <tr class="table-heading"
+                    *ngIf="expandedOptionsIndex===i">
+                    <td><img src="assets/icons/delete.jpg"
+                            (click)="deletePassById(p.id)"
+                            style="width: 30px; height: 30px;"
+                            alt=""></td>
+                    <td colspan="3"
+                        align="right">
+                        <div style="display: flex;  width: fit-content;">
+                            <button class="dropbtn fix-w-dis"
+                                (click)="navTo(p.pType, p.id)">PASS PURCHASE DETAILS</button>
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="dropbtn fix-w-dis"
+                                (click)="navTo('vpd', p.id)">VIEW PASS DETAILS</button>
+                            &nbsp;&nbsp;&nbsp;
+                            <button *ngIf="p.status === 'DEACTIVE' || p.status === 'DRAFT'"
+                                class="dropbtn fix-w-dis"
+                                (click)="activateOrDeactivate(p.id, 'ACTIVE')">ACTIVATE PASS</button>
+                            <button *ngIf="p.status === 'ACTIVE'"
+                                class="dropbtn fix-w-dis"
+                                (click)="activateOrDeactivate(p.id, 'DEACTIVE')">DEACTIVATE PASS</button>
+                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                        </div>
+                    </td>
+                </tr>
+            </ng-container>
+        </table>
+        <!-- <button class="accordion">Section 1</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div> -->
+
+    </div>
+</div>

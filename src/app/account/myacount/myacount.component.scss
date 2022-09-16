@@ -1,0 +1,92 @@
+.uname {
+    margin-top: 8rem;
+    margin-left: 2rem;
+    color: #19191F;
+    font-family: "Cinzel Decorative";
+    font-size: 64px;
+    letter-spacing: 0;
+    line-height: 86px;
+}
+.info {
+    margin-left: 2rem;
+    color: #19191F;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 29px;
+}
+.forHelp {
+    font-family: "Cinzel Decorative";
+    color: #FFFFFF;
+    margin-top: 7rem;
+    margin-left: 7rem;
+    margin-bottom: 5rem;
+    .title {
+        height: 25px;
+        width: 195px;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 25px;
+    }
+    .email {
+        height: 32px;
+        width: 470px;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: 32px;
+        margin-top: 1rem;
+        .link {
+            margin-top: 2rem;
+            border-bottom: 2px solid rgb(255, 255, 255);
+            text-decoration: none
+        }
+    }
+    .social-icons {
+        img {
+            margin-top: 3rem;
+            margin-right: 5rem;
+            width: 4rem;
+        }
+    }
+}
+.buttonsGroup {
+    display: inline-grid;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 95%;
+    .spanBtn {
+        padding: 3rem 3rem;
+        border: 1px solid #000000;
+        border-radius: 85px;
+        cursor: pointer;
+        .txt {
+            color: #19191F;
+            font-family: "Cinzel Decorative";
+            font-size: 48px;
+            letter-spacing: 0;
+            line-height: 65px;
+        }
+        .tagLine {
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 0;
+            line-height: 17px;
+        }
+        img {
+            margin-right: 2rem;
+            float: left;
+        }
+        .arrow {
+            margin-top: -5rem;
+            font-size: 48px;
+            font-family: Lato;
+            letter-spacing: 0;
+            font-weight: bold;
+            line-height: 56px;
+            float: right !important;
+        }
+    }
+}

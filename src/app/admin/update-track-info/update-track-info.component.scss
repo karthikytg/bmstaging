@@ -1,0 +1,41 @@
+.product-form {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    color: #000000;
+    font-family: Lato;
+    width: 75%;
+    overflow: auto;
+    .page-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .info-level {
+        font-size: 14px;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.product-form::-webkit-scrollbar {
+    display: none;
+}
+.inputs {
+    width: 90%;
+    outline: 1px solid black;
+    height: 4rem;
+    font-size: 22px;
+    padding-left: 1rem;
+    &.change {
+        padding-right: 5rem;
+    }
+}
+.inp-title {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}

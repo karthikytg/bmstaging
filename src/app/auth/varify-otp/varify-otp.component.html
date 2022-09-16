@@ -1,0 +1,39 @@
+<div class="container-fluid bg-3 " style="background-color: #E8EF01; height: 100vh;">    
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="leftText">
+            Sign Up to Pre-Register for products and to earn through referrals. <br>
+            <span class="tagLine">You need to be atleast 18 years of age to create an account with us.</span>
+        </div>
+        <div class="iImage">
+          <img src="assets/images/signupsignin.png" class="iImage" alt="illustration">
+        </div>
+      </div>
+      <div class="col-sm-6"> 
+        <div class="buttonsGroup">
+            <form class="example-form">
+                <div class="otpText">
+                    Enter OTP received on your phone or email address in the fields below
+                </div>
+                <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="config"></ng-otp-input>
+                <div class="otpText timer">
+                  <span>Didn’t Receive OTP?<i style="cursor: pointer;" (click)="resendOtp()" *ngIf="showResend">Resend OTP</i></span>
+                  <p>You can resend OTP in ( {{resendOtpIn}} )</p>
+                </div>
+                <input type="button" (click)="verifyOtp($event)" [ngClass]="otpEntered.length < 4 || showResend ? 'spanBtn disabled' : 'spanBtn'" [value]="btnLabel" [disabled]="otpEntered.length < 4 || showResend" >
+              </form>
+              <div *ngIf="a === '2'" class="backToLogin" routerLink="/signup-form">
+                ← CANCEL AND GO BACK
+              </div>
+              <div *ngIf="a === '1'" class="backToLogin" routerLink="/login">
+                ← CANCEL AND GO BACK
+              </div>
+              <div class="tagLine">
+                By Signing Up you agree to the Terms and Conditions and Privacy Policy set forth by BidMouse.
+              </div>
+        </div>
+        
+      </div>    
+    </div>
+  </div>

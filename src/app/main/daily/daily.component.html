@@ -1,0 +1,208 @@
+<ng-container *ngIf="dailyProduct!=undefined">
+    <div class="daily-one">
+        <div class="first">
+            <div class="timings">
+                Bidding Timings: {{dailyProduct.bidStartTime}} to {{dailyProduct.bidEndTime}}
+            </div>
+            <div class="bid">
+                Today on BidMouse Daily
+            </div>
+            <div class="pInfo">
+                {{dailyProduct.pname}}
+            </div>
+            <div class="info">
+                {{dailyProduct.description}}
+            </div>
+        </div>
+        <div class="second">
+            <img src="{{imageBaseUrl}}{{dailyProduct.pImage}}"
+                alt="">
+        </div>
+        <div class="third">
+            <div class="bid-info">
+                <div class="line">
+                    Current Bid at
+                </div>
+                <div class="price">
+                    ₹ 10.98
+                </div>
+                <div class="botton">
+                    <input type="button"
+                        routerLink="/bid-getin"
+                        value="GET IN">
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<div class="up-prod">
+    UPCOMING PRODUCTS
+</div>
+<ng-container *ngFor="let product of products">
+    <div class="daily-one">
+        <div class="first">
+            <div class="day">
+                <span style="font-size: 34px;">{{product.bidStartDate | date : 'EEEE'}}</span><br>
+                <span style="font-size: 26px;">{{product.bidStartDate | date : 'M-d-yyyy'}}</span>
+            </div>
+        </div>
+        <div class="second">
+            <img src="{{imageBaseUrl}}{{product.pImage}}"
+                alt="">
+        </div>
+        <div class="third">
+            <div class="up-prod-info">
+                <!-- <div class="pInfo">
+    
+                </div>
+                <div class="line">
+                    Current Bid at
+                </div> -->
+                <div class="up-prod-name">
+                    {{product.pname}}
+                </div>
+                <div class="disc">
+                    {{product.description}}
+                </div>
+                <div class="starts">
+                    Bidding starts at {{product.bidStartTime}}<br>
+                    Bidding starts at ₹ {{product.bidPrice}}
+                </div>
+                <div class="botton-view">
+                    <input type="button"
+                        value="VIEW PRODUCT">
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<div class="view-info">
+    Vote below for your favourite product amongst the list. Winning product will appear on BidMouse Daily for bidding on
+    the specified release date.
+</div>
+<div class="release">
+    For Release On: Wednesday, 17th June 2021
+</div>
+<div class="votin">
+    Voting Ends: Tuesday, 16th June 2021 at 11.59PM
+</div>
+<br><br>
+<div class="daily-one">
+    <div class="first">
+        <div class="bid">
+            PRODUCT LIST
+        </div>
+        <!-- <div class="pInfo">
+            Samsung Galaxy M51
+        </div> 
+        <div class="info">
+            Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla.
+        </div> -->
+        <div class="day2">
+            <span style="font-size: 34px; font-weight: bold;">JBL Wireless Speaker →</span><br>
+            <div style="font-size: 26px;">Samsung F62</div>
+            <div style="font-size: 26px;">HP PrintSmart</div>
+            <div style="font-size: 26px;">Canon EOS M6 Mark II</div>
+        </div>
+    </div>
+    <div class="second">
+        <img src="assets/images/iPhone1.png"
+            alt="">
+    </div>
+    <div class="third">
+        <div class="up-prod-info">
+            <!-- <div class="pInfo">
+                
+            </div>
+            <div class="line">
+                Current Bid at
+            </div> -->
+            <div class="up-prod-name">
+                JBL Wireless Speaker
+            </div>
+            <div class="disc">
+                Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi,
+                quis iaculis nulla iaculis.
+            </div>
+            <div class="starts">
+                Bidding starts at ₹ 10.00
+            </div>
+            <div class="botton-view">
+                <input type="button"
+                    value="VOTE FOR THIS">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="flex-support-contact">
+    <div class="support">
+        <div class="text">
+            <div style="font-size: 1.5vw;">FOR HELP & SUPPORT</div>
+            <div style="font-size: 2vw;">HELLO@BIDMOUSE.CO</div>
+            <br><br><br><br>
+            <div class="social">
+                VISIT OUR SOCIAL PAGES
+            </div>
+            <div class="social-icons">
+                <img src="assets/icons/facebook-singupsignin.svg"
+                    alt="">
+                <img src="assets/icons/twitter_referral.svg"
+                    alt="">
+                <img src="assets/icons/google-signupsignin.svg"
+                    alt="">
+            </div>
+            <br><br><br><br>
+            <div class="unit">
+                BidMouse is a Unit of <br>
+                AMGB Treeline Private Limited
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div style="font-size: 1.5vw;">Site Links</div>
+        <br><br><br><br>
+        <table border="0"
+            style="width: 110%;">
+            <tr>
+                <td><span>Sign Up →</span></td>
+                <td><span>Standard →</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span>Refer and Earn →</span></td>
+                <td><span><span>Premium →</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span><span>FAQ’s →</span></span></td>
+                <td><span><span>Winners →</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span>Help Centre→</span></td>
+                <td><span>About BidMouse →</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><span>Privacy Policy →</span></td>
+                <td><span>Partner with BidMouse →</span></td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2"><span>Terms of Service →</span></td>
+            </tr>
+        </table>
+
+    </div>
+</div>

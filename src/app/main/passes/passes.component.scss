@@ -1,0 +1,127 @@
+.pass-row {
+  display: flex;
+  flex-direction: row;
+  color: #FFFFFF;
+  .left {
+    flex: 1;
+    .img-div {
+      margin-top: 5rem;
+      text-align: center;
+      border-radius: 1rem;
+      background-image: linear-gradient(#0E0052, #342699);
+      img {
+        width: 85%;
+        margin: 5rem 0rem;
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    font-family: Lato;
+    .day {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      font-size: 120px;
+      font-weight: 300;
+      width: 80%;
+    }
+    .price {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      font-size: 120px;
+      font-weight: 300;
+    }
+    input {
+      margin-top: 2rem;
+      margin-left: 2rem;
+      background: transparent;
+      border: 1px solid #FFFFFF;
+      color: #FFFFFF;
+      padding: 2rem 10rem;
+      border-radius: 55px;
+      font-size: 14px;
+      font-weight: 900;
+    }
+  }
+}
+
+.day-pass {
+  color: #FFFFFF;
+  font-family: 'Lato';
+  margin-left: 5rem;
+  margin-top: 5rem;
+  font-size: 5rem;
+  width: 81%;
+}
+
+.pass-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.pass {
+  border: 1px solid #000;
+  border-radius: 1rem;
+  background-color: #fff;
+  padding: 5rem;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Lato;
+  font-weight: 300;
+  .title {
+    font-size: 3rem;
+  }
+  .price {
+    margin-top: 1rem;
+    font-size: 4rem;
+  }
+  img {
+    margin-top: 1rem;
+    width: 70%;
+  }
+}
+
+.no-pass {
+  color: #FFFFFF;
+  margin-left: 5rem;
+}
+
+.flex-support-contact {
+  display: flex;
+  flex-direction: row;
+  height: 95vh;
+  color: #FFFFFF;
+  font-family: "Cinzel Decorative";
+  // font-size: 18px;
+  .support {
+    flex: 1;
+    padding: 10rem 5rem;
+    .text {
+      // padding: 5rem;
+    }
+    .social {
+      font-size: 1.5vw;
+      letter-spacing: 0;
+    }
+    .social-icons {
+      img {
+        margin-top: 1rem;
+        margin-right: 5rem;
+        width: 4rem;
+      }
+    }
+    .unit {
+      font-size: 2vw;
+    }
+  }
+  .contact {
+    flex: 1;
+    padding: 10rem 5rem;
+    span {
+      font-size: 24px;
+      border-bottom: 2px solid #FFFFFF;
+    }
+  }
+}

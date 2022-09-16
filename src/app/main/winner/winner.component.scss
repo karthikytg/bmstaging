@@ -1,0 +1,124 @@
+.winner-row {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    .w1 {
+        flex: 1;
+        border: 1px solid #E8EF01;
+        border-radius: 1rem;
+        .winner {
+            font-family: Lato;
+            font-size: 36px;
+            font-weight: 300;
+            text-align: left;
+            margin-left: 5rem;
+            margin-top: 5rem;
+            small {
+                font-size: 24px;
+            }
+            span {
+                font-size: 30px;
+            }
+        }
+        .date {
+            font-family: Lato;
+            font-size: 28px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .profile-img {
+            width: 45%;
+            margin: auto;
+            margin-top: 6rem;        
+            img {
+                width: 95%;
+                height: 16rem;
+                border-radius: 10%;
+                object-fit: cover;
+            }
+            .name {
+                font-family: Lato;
+                font-size: 36px;
+                font-weight: 300;
+                text-align: center;
+                margin-top: 3rem;
+            }
+        }
+        .price {
+            font-family: Lato;
+            font-size: 48px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .won {
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .arrows {
+            position: absolute;
+            bottom: 0rem;
+            left: 5rem;
+            font-size: 6rem;
+            font-weight: bold;
+            letter-spacing: 1rem;
+            .inactive {
+                color: #2F2F2F;
+            }
+        }
+        .pImage {
+            margin: auto;
+            width: 45%;
+            margin-top: 35%;
+            img {
+                width: 90%;
+                height: 20rem;
+                border-radius: 10%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.flex-support-contact {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    // font-size: 18px;
+
+    .support {
+        flex: 1;
+        padding: 10rem 5rem;
+        .text {
+            // padding: 5rem;
+        }
+        .social {
+            font-size: 1.5vw;
+            letter-spacing: 0;
+        }
+        .social-icons {
+            img {
+                margin-top: 1rem;
+                margin-right: 5rem;
+                width: 4rem;
+            }
+        }
+        .unit {
+            font-size: 2vw;
+        }
+    }
+    .contact {
+        flex: 1;
+        padding: 10rem 5rem;
+        span {
+            font-size: 24px;
+            border-bottom: 2px solid #FFFFFF;
+        }
+    
+    }
+}

@@ -1,0 +1,214 @@
+.daily-one {
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    .first {
+        flex: 1;
+        border: 2px solid #ffffff;
+        border-radius: 1rem;
+        .bid {
+            color: #FFFFFF;
+            font-family: Lato;
+            font-size: 24px;
+            font-weight: 300;
+            margin: 1rem 5rem 0;
+        }
+        .pInfo {
+            color: #FFFFFF;
+            font-family: Lato;
+            font-size: 64px;
+            font-weight: 300;
+            width: 21rem;
+            margin-top: 1rem;
+            margin-left: 5rem;
+        }
+        .info {
+            color: #FFFFFF;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 300;
+            width: 75%;
+            margin: 3rem 5rem 0;
+        }
+        .timings {
+            font-family: Lato;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 3rem 5rem 0;
+        }
+        .day {
+            margin-top: 100%;
+            color: #FFFFFF;
+            font-family: Lato;
+            font-weight: 300;
+            margin-left: 5rem;
+            margin-bottom: 5rem;
+        }
+        .day2 {
+            margin-top: 60%;
+            color: #FFFFFF;
+            font-family: Lato;
+            font-weight: 300;
+            margin-left: 5rem;
+            margin-bottom: 5rem;
+        }
+    }
+    .second {
+        flex: 1;
+        border: 2px solid #ffffff;
+        padding-top: 5rem;
+        border-radius: 1rem;
+        text-align: center;
+        img {
+            margin-top: 10%;
+            width: 35rem;
+            object-fit: cover;
+        }
+    }
+    .third {
+        flex: 1;
+        border: 2px solid #ffffff;
+        padding-top: 5rem;
+        text-align: center;
+        border-radius: 1rem;
+        .up-prod-info {
+            margin-bottom: 10%;
+            .up-prod-name {
+                font-family: Lato;
+                font-size: 40px;
+                font-weight: 300;
+                width: 25rem;
+                text-align: left;
+                margin-left: 5rem;
+            }
+            .disc {
+                font-family: Lato;
+                font-size: 16px;  
+                font-weight: 300;
+                margin-left: 5rem;
+                text-align: left;
+                margin-top: 5rem;
+                width: 23rem;
+            }
+            .starts {
+                font-family: Lato;
+                font-size: 28px;
+                font-weight: 300;
+                margin-left: 5rem;
+                text-align: left;
+                margin-top: 2rem;
+            }
+            .botton-view {
+                input {
+                    background: transparent;
+                    color: #fff;
+                    border: 2px solid;
+                    padding: 1.5rem 8rem;
+                    font-size: 24px;
+                    font-weight: bold;
+                    border-radius: 55px;
+                    margin-top: 6rem;
+                }
+            }
+        }
+        .bid-info {
+            margin-top: 25%;
+            .line {
+                color: #FFFFFF;
+                font-family: Lato;
+                font-size: 24px;
+                font-weight: 300;
+            }
+            .price {
+                font-family: Lato;
+                font-size: 72px;
+                font-weight: 300;
+                text-align: center;
+            }
+            .botton {
+                input {
+                    background: transparent;
+                    color: #fff;
+                    border: 2px solid;
+                    padding: 1.5rem 10rem;
+                    font-size: 24px;
+                    font-weight: bold;
+                    border-radius: 55px;
+                    margin-top: 6rem;
+                }
+            }
+        }
+    }
+}
+.up-prod {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 48px;
+    font-weight: 300;
+    margin-top: 4rem;
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+}
+.view-info {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 48px;
+    font-weight: 300;
+    margin-left: 5rem;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+.release {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 5rem;
+
+}
+.votin {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 5rem;
+}
+.flex-support-contact {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    // font-size: 18px;
+
+    .support {
+        flex: 1;
+        padding: 10rem 5rem;
+        .text {
+            // padding: 5rem;
+        }
+        .social {
+            font-size: 1.5vw;
+            letter-spacing: 0;
+        }
+        .social-icons {
+            img {
+                margin-top: 1rem;
+                margin-right: 5rem;
+                width: 4rem;
+            }
+        }
+        .unit {
+            font-size: 2vw;
+        }
+    }
+    .contact {
+        flex: 1;
+        padding: 10rem 5rem;
+        span {
+            font-size: 24px;
+            border-bottom: 2px solid #FFFFFF;
+        }
+    
+    }
+}

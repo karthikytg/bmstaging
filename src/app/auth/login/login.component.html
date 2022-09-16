@@ -1,0 +1,57 @@
+<div class="container-fluid bg-3 " style="background-color: #E8EF01; height: 100vh;">    
+    
+    <div class="loginRow">
+      <div class="left">
+        <div class="leftText">
+            Sign Up to Pre-Register for products and to earn through referrals. <br>
+            <span class="tagLine">You need to be atleast 18 years of age to create an account with us.</span>
+        </div>
+        <div class="iImage">
+          <img src="assets/images/signupsignin.png" class="iImage" alt="illustration">
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="buttonsGroup">
+          <div *ngIf="errMessage" class="errMsg">
+            {{ errMessage }}
+          </div><br>
+            <form [formGroup]="loginForm" id="data" method="post" class="example-form">
+                
+                <mat-form-field class="example-full-width">
+                    <mat-label >Email Address</mat-label>
+                    <input type="email" formControlName="email"  matInput>
+                    <mat-error >
+                      Please enter a valid email address
+                    </mat-error>
+                    <!-- <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error> -->
+                  </mat-form-field>
+                  
+                  
+                  <mat-form-field class="example-full-width" style="width: 382px;">
+                    <mat-label >Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <span matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        {{hide ? 'SHOW' : 'HIDE'}}
+                    </span>
+                    <mat-error >
+                      Please enter a password
+                    </mat-error>
+                    <!-- <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error> -->
+                  </mat-form-field>
+              </form>
+              <input type="button" class="spanBtn" value="LOGIN" (click)="login()">
+              <div class="backToLogin" routerLink="/signup">
+                ← BACK TO ALL SIGN UP OPTIONS
+              </div>
+              <div class="tagLine">
+                By Signing Up you agree to the Terms and Conditions and Privacy Policy set forth by BidMouse.
+              </div>
+        </div>
+        
+      </div>    
+    </div>
+  </div>

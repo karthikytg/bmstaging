@@ -1,0 +1,343 @@
+.premium-row {
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    .left {
+        flex: 2;
+        padding-top: 1rem;        
+        padding-left: 0rem;
+        padding-bottom: 0rem;
+        padding-right: 0rem;
+        font-size: 8rem;
+        font-family: "Cinzel Decorative";
+        border: 1px solid #4A4A4A;
+        border-radius: 1rem;
+        line-height: initial;
+        .texe {
+            margin-left: 5rem;
+        }
+    }
+    .right {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-radius: 1rem;
+        .circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #E8EF01;
+            img {
+                margin-top: 10%;
+                margin-left: 20%;
+                width: 26rem;
+                object-fit: cover;
+            }
+        }
+    }
+    .pname {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-radius: 1rem;
+        font-family: "Cinzel Decorative";
+        font-size: 36px;
+        .njdk {
+            width: 70%;
+            margin-left: 5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+    .price {
+        flex: 1;
+        border: 1px solid;
+        border-radius: 1rem;
+        .hb {
+            font-family: Lato;
+            font-size: 24px;
+            font-weight: 300;
+            margin-left: 5rem;
+            margin-top: 1rem;
+        }
+        .amt {
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 72px;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+    }
+    .bid-time {
+        border: 1px solid;
+        border-radius: 1rem;
+        flex: 1;
+        text-align: center;
+        .hb {
+            font-family: Lato;
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 1rem;
+        }
+        input {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid;
+            padding: 1.5rem 10rem;
+            border-radius: 55px;
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+.up-prod {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-size: 5rem;
+}
+.pre-prod {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    .left {
+        flex: 2;
+        border: 1px solid;
+        border-radius: 1rem;
+        background-color: black;
+        text-align: center;
+        position: relative;
+        .circle {
+            margin: auto;
+            width: 60%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #E8EF01;
+            img {
+                margin-top: 12%;
+                width: 30rem;
+                object-fit: cover;
+            }
+        }
+        .release {
+            position: absolute;
+            bottom: 2rem;
+            left: 1rem;
+            text-align: left;
+            .on {
+                font-family: "sur";
+                font-size: 36px;
+            }
+            .day {
+                font-family: Lato;
+                font-size: 24px;
+                font-weight: 300;
+            }
+            .date {
+                font-family: Lato;
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+    }
+    .right {
+        flex: 1;
+        border: 1px solid;
+        border-radius: 1rem;
+        .title {
+            margin-top: 5rem;
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 24px;
+            width: 15rem;
+        }
+        .info {
+            margin-top: 3rem;
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 300;
+            width: 60%;
+        }
+        .bid {
+            margin-top: 3rem;
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 36px;
+            letter-spacing: 0;
+            width: 60%;
+            small {
+                font-size: 24px;
+            }
+        }
+        .pre-btn {
+            margin-left: 4rem;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            padding: 1rem 5rem;
+            background: transparent;
+            border: 2px solid;
+            color: #FFFFFF;
+            border-radius: 55px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: Lato;
+        }
+    }
+}
+.view-info {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 48px;
+    font-weight: 300;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.release {
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 5rem;
+
+}
+.votin {
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    font-size: 24px;
+    font-weight: 300;
+    margin-left: 5rem;
+}
+.product-list {
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    .s1 {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-radius: 1rem;
+        position: relative;
+        .label {
+            margin-top: 5rem;
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 24px;
+        }
+        .info {
+            position: absolute;
+            bottom: 2rem;
+            left: 5rem;
+            font-family: Lato;
+            font-size: 24px;
+            .b {
+                font-weight: bold;
+            }
+            
+        }
+    }
+    .s2 {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-radius: 1rem;
+        .circle {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+            height: 90%;
+            border-radius: 50%;
+            background-color: #E8EF01;
+            img {
+                margin-left: 21%;
+                margin-top: 14%;
+                width: 25rem;
+                object-fit: cover;
+            }
+        }
+    }
+    .s3 {
+        flex: 1;
+        border: 1px solid #4A4A4A;
+        border-radius: 1rem;
+        .title {
+            margin-top: 5rem;
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 24px;
+        }
+        .info {
+            margin-top: 3rem;
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 300;
+            width: 60%;
+        }
+        .bid {
+            margin-top: 3rem;
+            margin-left: 5rem;
+            font-family: Lato;
+            font-size: 36px;
+            letter-spacing: 0;
+            width: 60%;
+            small {
+                font-size: 24px;
+            }
+        }
+        .pre-btn {
+            margin-left: 4rem;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            padding: 1rem 5rem;
+            background: transparent;
+            border: 2px solid;
+            color: #FFFFFF;
+            border-radius: 55px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: Lato;
+        }
+    }
+}
+.flex-support-contact {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    color: #FFFFFF;
+    font-family: "Cinzel Decorative";
+    // font-size: 18px;
+
+    .support {
+        flex: 1;
+        padding: 10rem 5rem;
+        .text {
+            // padding: 5rem;
+        }
+        .social {
+            font-size: 1.5vw;
+            letter-spacing: 0;
+        }
+        .social-icons {
+            img {
+                margin-top: 1rem;
+                margin-right: 5rem;
+                width: 4rem;
+            }
+        }
+        .unit {
+            font-size: 2vw;
+        }
+    }
+    .contact {
+        flex: 1;
+        padding: 10rem 5rem;
+        span {
+            font-size: 24px;
+            border-bottom: 2px solid #FFFFFF;
+        }
+    
+    }
+}

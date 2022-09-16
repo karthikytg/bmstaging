@@ -1,0 +1,78 @@
+.leftText {
+    position: relative;
+    top: 6rem;
+    left: 6rem;
+    color: #19191F;
+    width: 320px;
+    font-family: "Cinzel Decorative";
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 32px;
+    .tagLine {
+        height: 34px;
+        width: 320px;
+        color: #19191F;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 17px;
+    }
+}
+.rightSide { 
+
+}
+.buttonsGroup {
+    position: relative;
+    top: 6rem;
+    left: 5rem;
+    display: inline-grid;
+    .spanBtn {
+        margin: 0.7rem;
+        padding: 1rem 3rem;
+        border: 1px solid #000000;
+        border-radius: 50px;
+        cursor: pointer;
+        font-family: Lato;
+        font-size: 18px;
+        letter-spacing: 0.56px;
+        line-height: 22px;
+        img {
+            width: 24px;
+            margin-right: 2rem;
+        }
+        
+    }
+    // .spanBtn:hover{
+    //     background-color: #faec6e;
+    // }
+    .accontHave {
+        margin: 2rem 1.5rem;
+        height: 22px;
+        color: #000000;
+        font-family: Lato;
+        font-size: 18px;
+        letter-spacing: 0.56px;
+        line-height: 22px;
+        .loginHere {
+            color: #000000;
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.56px;
+            line-height: 22px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 1px;
+            text-decoration: none;
+        }
+    }
+    .terms {
+        width: 393px;
+        margin: 1rem 1.5rem;
+        color: #000000;
+        font-family: Lato;
+        font-size: 14px;
+        letter-spacing: 0.44px;
+        line-height: 17px;
+    }
+}
